@@ -58,6 +58,7 @@
   },
   "dependencies": {
     "@airgap/aeternity": "0.13.40",
+    "@apex-fusion/cardano": "0.13.40",
     "@airgap/acurast": "0.13.40",
     "@airgap/angular-core": "0.0.56",
     "@airgap/angular-ngrx": "0.0.56",
