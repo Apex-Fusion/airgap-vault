@@ -1,4 +1,5 @@
 import { AeternityModule } from '@airgap/aeternity'
+import { CardanoModule } from '@apex-fusion/cardano'
 import {
   APP_PLUGIN,
   createV0TezosShieldedTezProtocol,
@@ -173,6 +174,7 @@ export class AppComponent implements AfterViewInit {
   private async initializeProtocols(): Promise<void> {
     this.moduleService.init([
       new BitcoinModule(),
+      new CardanoModule(),
       new EthereumModule(),
       new TezosModule(),
       new PolkadotModule(),
