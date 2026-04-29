@@ -38,3 +38,12 @@ UserInterfaceState.xcuserstate
 
 src/assets/protocol_modules/
 AAPT2
+
+# Environment files
+.env
+.env.local
+
+# Playwright
+playwright-report/
+test-results/
+e2e/screenshots/

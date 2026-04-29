@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest", "--config", "/home/user/Documents/my-projects/My-Apex-Projects/airgap/playwright-mcp-config.json"]
+    },
+    "browser-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@browsermcp/mcp@latest"]
+    }
+  }
+}
