@@ -8,7 +8,7 @@ env:
 jobs:
   environment:
     name: 🌱 Load Environment
-    runs-on: ubuntu-latest
+    runs-on: nixos
 
     steps:
       - name: ⚙️ Node.js version used - ${{ env.node_version }}
@@ -17,7 +17,7 @@ jobs:
           node-version: ${{ env.node_version }}
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: nixos
     needs: [environment]
 
     steps:
