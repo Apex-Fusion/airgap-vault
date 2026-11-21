@@ -38,7 +38,7 @@ jobs:
 
   test:
     name: 🧪 Test
-    runs-on: nixos
+    runs-on: self-hosted
     needs: environment
 
     strategy:
@@ -65,7 +65,7 @@ jobs:
 
   prebuild:
     name: 🔧 Pre Build
-    runs-on: nixos
+    runs-on: self-hosted
     needs: environment
 
     strategy:
@@ -98,7 +98,7 @@ jobs:
 
   build_electron:
     name: 🏗️ Build to Electron And Sync
-    runs-on: nixos
+    runs-on: self-hosted
     needs: [environment, prebuild]
 
     strategy:
@@ -128,7 +128,7 @@ jobs:
 
   build_ionic:
     name: 🏗️ Build Ionic
-    runs-on: nixos
+    runs-on: self-hosted
     needs: [environment, prebuild]
 
     steps:
@@ -165,7 +165,7 @@ jobs:
 
   build_windows:
     name: 🏗️ Build to Windows
-    runs-on: nixos
+    runs-on: self-hosted
     needs: [environment, build_electron]
 
     steps:
@@ -226,7 +226,7 @@ jobs:
             ${{ env.electron_folder }}/build/${{ needs.environment.outputs.package_name }}-${{ needs.environment.outputs.package_version }}.zip
   build_linux:
     name: 🏗️ Build to Linux
-    runs-on: nixos
+    runs-on: self-hosted
     needs: [environment, build_electron]
 
     steps:
@@ -251,7 +251,7 @@ jobs:
 
   build_android:
     name: 🏗️ Build to Android
-    runs-on: nixos
+    runs-on: self-hosted
     needs: [environment, build_ionic]
 
     steps:

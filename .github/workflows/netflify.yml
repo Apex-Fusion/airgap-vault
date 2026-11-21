@@ -8,7 +8,7 @@ env:
 jobs:
   environment:
     name: 🌱 Load Environment
-    runs-on: nixos
+    runs-on: self-hosted
 
     steps:
       - name: ⚙️ Node.js version used - ${{ env.node_version }}
@@ -17,7 +17,7 @@ jobs:
           node-version: ${{ env.node_version }}
 
   build:
-    runs-on: nixos
+    runs-on: self-hosted
     needs: [environment]
 
     steps:
